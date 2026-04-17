@@ -4,7 +4,6 @@ function Navbar() {
   return (
     <nav>
       <h2>MediBook</h2>
-
       <div>
         <Link to="/">Home</Link>
         <Link to="/doctors">Doctors</Link>
