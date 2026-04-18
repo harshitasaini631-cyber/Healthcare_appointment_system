@@ -294,3 +294,36 @@ footer {
   border-radius: 12px;
   font-size: 15px;
 }
+
+
+.filter-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-row select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e3d7f4;
+  background: white;
+  color: #4d3a6d;
+}
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  align-items: center;
+}
+
+.pagination button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #6c3fc9;
+  color: white;
+  cursor: pointer;
+}
