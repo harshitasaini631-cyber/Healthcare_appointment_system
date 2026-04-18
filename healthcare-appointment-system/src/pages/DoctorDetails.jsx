@@ -1,10 +1,12 @@
 import { useParams, Link } from "react-router-dom";
-import doctorsData from "../data/fallbackDoctors";
+import fallbackDoctors from "../data/fallbackDoctors";
 
 function DoctorDetails() {
   const { id } = useParams();
 
-  const doctor = doctorsData.find((doc) => doc.id === Number(id));
+  const storedDoctors = JSON.parse(localStorage.getItem("doctors")) || fallbackDoctors;
+
+  const doctor = storedDoctors.find((doc) => doc.id === Number(id));
 
   if (!doctor) {
     return <h2>Doctor not found</h2>;

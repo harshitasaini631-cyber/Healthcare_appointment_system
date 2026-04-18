@@ -47,9 +47,11 @@ function Doctors() {
         }));
 
         setDoctors(mappedDoctors);
+        localStorage.setItem("doctors", JSON.stringify(mappedDoctors));
       } catch (err) {
         setError("Could not load doctors. Showing backup data.");
         setDoctors(fallbackDoctors);
+        localStorage.setItem("doctors", JSON.stringify(fallbackDoctors));
       } finally {
         setLoading(false);
       }
