@@ -615,6 +615,21 @@ footer {
   row-gap: 16px;
 }
 
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__prev-button,
+.react-calendar__navigation__next-button,
+.react-calendar__navigation__next2-button {
+  background: transparent !important;
+}
+
+.react-calendar__navigation button {
+  background: transparent !important;
+}
+
+.react-calendar__navigation > * {
+  background: transparent !important;
+}
+
 .dashboard-page {
   max-width: 1440px;
   margin: 0 auto;
