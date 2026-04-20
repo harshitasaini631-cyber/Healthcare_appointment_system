@@ -4,7 +4,9 @@ import "react-calendar/dist/Calendar.css";
 import { useAppointmentContext } from "../context/AppointmentContext";
 
 function Dashboard() {
-  const { appointments, updateAppointment } = useAppointmentContext();
+  const { appointments, updateAppointment, deleteAppointment } =
+    useAppointmentContext();
+
   const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState({
     appointmentDate: "",
@@ -59,6 +61,13 @@ function Dashboard() {
       timeSlot: "",
       reason: "",
     });
+  };
+
+  const handleDelete = (id) => {
+    deleteAppointment(id);
+    if (editingId === id) {
+      handleCancelEdit();
+    }
   };
 
   return (
@@ -161,12 +170,21 @@ function Dashboard() {
 
                   <div className="dashboard-action-buttons">
                     <button
+                      type="button"
                       className="secondary-btn"
                       onClick={handleCancelEdit}
                     >
                       Cancel
                     </button>
                     <button
+                      type="button"
+                      className="delete-btn"
+                      onClick={() => handleDelete(appointment.id)}
+                    >
+                      Delete
+                    </button>
+                    <button
+                      type="button"
                       className="primary-btn"
                       onClick={() => handleSaveEdit(appointment)}
                     >
@@ -177,10 +195,18 @@ function Dashboard() {
               ) : (
                 <div className="dashboard-action-buttons">
                   <button
+                    type="button"
                     className="primary-btn"
                     onClick={() => handleEditClick(appointment)}
                   >
                     Edit / Reschedule
+                  </button>
+                  <button
+                    type="button"
+                    className="delete-btn"
+                    onClick={() => handleDelete(appointment.id)}
+                  >
+                    Cancel
                   </button>
                 </div>
               )}

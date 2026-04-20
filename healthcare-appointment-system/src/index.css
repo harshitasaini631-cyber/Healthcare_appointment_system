@@ -765,3 +765,13 @@ footer {
   margin-top: 18px;
   flex-wrap: wrap;
 }
+
+.delete-btn {
+  border: none;
+  padding: 13px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #fee4e2;
+  color: #b42318;
+}
