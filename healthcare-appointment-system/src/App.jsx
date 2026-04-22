@@ -1,8 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -15,30 +12,30 @@ import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 import { AppointmentProvider } from "./context/AppointmentContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
-  
   return (
-    <AppointmentProvider>
-      <BrowserRouter>
-        <Navbar />
+    <ThemeProvider>
+      <AppointmentProvider>
+        <BrowserRouter>
+          <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/doctors" element={<Doctors />} />
-          <Route path="/doctor/:id" element={<DoctorDetails />} />
-          <Route path="/book/:id" element={<BookAppointment />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/doctors" element={<Doctors />} />
+            <Route path="/doctor/:id" element={<DoctorDetails />} />
+            <Route path="/book/:id" element={<BookAppointment />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
 
-        <Footer />
-      </BrowserRouter>
-    </AppointmentProvider>
+          <Footer />
+        </BrowserRouter>
+      </AppointmentProvider>
+    </ThemeProvider>
   );
 }
-
-
 
 export default App;

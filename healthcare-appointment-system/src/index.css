@@ -790,3 +790,239 @@ footer {
   background: #fee4e2;
   color: #b42318;
 }
+
+
+
+
+
+body.dark-mode {
+  background-color: #14101c;
+  color: #f4efff;
+}
+
+body.dark-mode nav {
+  background: #1b1525;
+  border-bottom: 1px solid #312541;
+}
+
+body.dark-mode nav h2,
+body.dark-mode nav a {
+  color: #ffffff;
+}
+
+body.dark-mode footer {
+  background: #1b1525;
+  border-top: 1px solid #312541;
+  color: #e9ddff;
+}
+
+body.dark-mode .doctor-card,
+body.dark-mode .doctor-details-card,
+body.dark-mode .booking-card,
+body.dark-mode .appointment-card,
+body.dark-mode .empty-dashboard,
+body.dark-mode .calendar-wrapper,
+body.dark-mode .edit-appointment-box {
+  background: #1e1728;
+  border: 1px solid #34264b;
+}
+
+body.dark-mode .doctor-card h2,
+body.dark-mode .doctor-card h3,
+body.dark-mode .doctor-card p,
+body.dark-mode .doctor-details-card h1,
+body.dark-mode .doctor-details-card h2,
+body.dark-mode .doctor-details-card p,
+body.dark-mode .booking-card h1,
+body.dark-mode .booking-card h2,
+body.dark-mode .booking-card h3,
+body.dark-mode .booking-card p,
+body.dark-mode .appointment-card h1,
+body.dark-mode .appointment-card h2,
+body.dark-mode .appointment-card h3,
+body.dark-mode .appointment-card p,
+body.dark-mode .empty-dashboard h1,
+body.dark-mode .empty-dashboard h2,
+body.dark-mode .empty-dashboard p {
+  color: #f4efff;
+}
+
+body.dark-mode .doctor-tag,
+body.dark-mode .availability-badge {
+  background: #312541;
+  color: #d8c9f5 !important;
+}
+
+body.dark-mode .booking-tag {
+  background: #312541;
+  color: #d8c9f5 !important;
+}
+
+body.dark-mode .booking-left {
+  background: #2a2038;
+}
+
+body.dark-mode .booking-left h1,
+body.dark-mode .booking-specialty,
+body.dark-mode .booking-location {
+  color: #f4efff !important;
+}
+
+body.dark-mode .form-step input,
+body.dark-mode .form-step select,
+body.dark-mode .form-step textarea {
+  background: #241b31 !important;
+  color: #f4efff !important;
+  border: 1px solid #3c2d57 !important;
+}
+
+body.dark-mode .form-step input::placeholder,
+body.dark-mode .form-step textarea::placeholder {
+  color: #b9abcf;
+}
+
+body.dark-mode .form-step input:focus,
+body.dark-mode .form-step select:focus,
+body.dark-mode .form-step textarea:focus {
+  background: #241b31 !important;
+  color: #f4efff !important;
+  border: 1px solid #6c3fc9 !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(108, 63, 201, 0.15);
+}
+
+body.dark-mode .react-calendar {
+  background: #241b31 !important;
+  color: #f4efff !important;
+  border: none !important;
+}
+
+body.dark-mode .react-calendar button {
+  color: #f4efff !important;
+  background: transparent;
+}
+
+body.dark-mode .react-calendar__month-view__days button {
+  background: #2d2340 !important;
+  border-radius: 50%;
+  color: #f4efff !important;
+}
+
+body.dark-mode .react-calendar__tile:disabled {
+  background: #3a3148 !important;
+  color: #8f83a7 !important;
+}
+
+body.dark-mode .react-calendar__tile--now {
+  background: #f2ea58 !important;
+  color: #2b2138 !important;
+}
+
+body.dark-mode .react-calendar__tile--active {
+  background: #22b8cf !important;
+  color: white !important;
+}
+
+body.dark-mode .react-calendar__tile:enabled:hover {
+  background: #3b2f52 !important;
+}
+
+body.dark-mode .time-pill {
+  background: #2d2340 !important;
+  color: #f4efff !important;
+  border: 1px solid #4a3a65 !important;
+}
+
+body.dark-mode .selected-pill {
+  background: #6c3fc9 !important;
+  color: white !important;
+  border-color: #6c3fc9 !important;
+}
+
+body.dark-mode .react-calendar__tile--active,
+body.dark-mode .react-calendar__tile--active:enabled,
+body.dark-mode .react-calendar__tile--active:enabled:hover,
+body.dark-mode .react-calendar__tile--active:enabled:focus {
+  background: #22b8cf !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .booking-summary {
+  background: #241b31 !important;
+  border: 1px solid #3c2d57 !important;
+}
+
+body.dark-mode .booking-summary p,
+body.dark-mode .booking-summary strong {
+  color: #f4efff !important;
+}
+
+body.dark-mode .dashboard-page h1,
+body.dark-mode .dashboard-page h2,
+body.dark-mode .dashboard-title {
+  color: #f4efff !important;
+}
+
+body.dark-mode .dashboard-page p,
+body.dark-mode .dashboard-subtitle {
+  color: #cbbbe7 !important;
+}
+
+body.dark-mode .doctors-page h1,
+body.dark-mode .doctors-page h2,
+body.dark-mode .doctors-title {
+  color: #f4efff !important;
+}
+
+body.dark-mode .doctors-page p,
+body.dark-mode .doctors-subtitle {
+  color: #cbbbe7 !important;
+}
+
+body.dark-mode .search-box input,
+body.dark-mode .filter-select,
+body.dark-mode .sort-select,
+body.dark-mode select {
+  background: #241b31 !important;
+  color: #f4efff !important;
+  border: 1px solid #3c2d57 !important;
+}
+
+body.dark-mode .search-box input::placeholder {
+  color: #b9abcf !important;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="search"],
+body.dark-mode .search-input,
+body.dark-mode .search-bar input {
+  background: #241b31 !important;
+  color: #f4efff !important;
+  border: 1px solid #3c2d57 !important;
+}
+
+body.dark-mode input[type="text"]::placeholder,
+body.dark-mode input[type="search"]::placeholder,
+body.dark-mode .search-input::placeholder,
+body.dark-mode .search-bar input::placeholder {
+  color: #b9abcf !important;
+}
+
+body.dark-mode .form-step input,
+body.dark-mode .form-step input:focus,
+body.dark-mode .form-step input:active {
+  background-color: #241b31 !important;
+  color: #f4efff !important;
+  -webkit-text-fill-color: #f4efff !important;
+  caret-color: #f4efff !important;
+}
+
+body.dark-mode input:-webkit-autofill,
+body.dark-mode input:-webkit-autofill:hover,
+body.dark-mode input:-webkit-autofill:focus,
+body.dark-mode textarea:-webkit-autofill,
+body.dark-mode select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #241b31 inset !important;
+  -webkit-text-fill-color: #f4efff !important;
+  caret-color: #f4efff !important;
+}
