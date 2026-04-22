@@ -77,6 +77,28 @@ function Dashboard() {
         <p>Manage your upcoming healthcare bookings in one place.</p>
       </div>
 
+      <div className="dashboard-stats-grid">
+        <div className="dashboard-stat-card">
+          <h3>{appointments.length}</h3>
+          <p>Total Appointments</p>
+        </div>
+
+        <div className="dashboard-stat-card">
+          <h3>{appointments.filter((item) => item.status === "Upcoming").length}</h3>
+          <p>Upcoming</p>
+        </div>
+
+        <div className="dashboard-stat-card">
+          <h3>
+            {
+              [...new Set(appointments.map((item) => item.specialty))].length
+            }
+          </h3>
+          <p>Specialties Booked</p>
+        </div>
+      </div>
+
+
       {appointments.length === 0 ? (
         <div className="empty-dashboard">
           <h2>No appointments booked yet</h2>
@@ -87,16 +109,18 @@ function Dashboard() {
           {appointments.map((appointment) => (
             <div key={appointment.id} className="appointment-card">
               <div className="appointment-card-top">
-                <img
-                  src={appointment.image}
-                  alt={appointment.doctorName}
-                  className="appointment-doctor-image"
-                />
+                <div className="appointment-card-left">
+                  <img
+                    src={appointment.image}
+                    alt={appointment.doctorName}
+                    className="appointment-doctor-image"
+                  />
 
-                <div className="appointment-info">
-                  <h2>{appointment.doctorName}</h2>
-                  <p>{appointment.specialty}</p>
-                  <p>{appointment.location}</p>
+                  <div className="appointment-info">
+                    <h2>{appointment.doctorName}</h2>
+                    <p>{appointment.specialty}</p>
+                    <p>{appointment.location}</p>
+                  </div>
                 </div>
 
                 <span className="appointment-status">
@@ -140,9 +164,8 @@ function Dashboard() {
                       <button
                         key={slot}
                         type="button"
-                        className={`time-pill ${
-                          editData.timeSlot === slot ? "selected-pill" : ""
-                        }`}
+                        className={`time-pill ${editData.timeSlot === slot ? "selected-pill" : ""
+                          }`}
                         onClick={() =>
                           setEditData((prev) => ({
                             ...prev,
