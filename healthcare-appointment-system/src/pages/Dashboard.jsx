@@ -128,16 +128,42 @@ function Dashboard() {
                 </span>
               </div>
 
-              <div className="appointment-details">
-                <p><strong>Patient:</strong> {appointment.patientName}</p>
-                <p><strong>Age:</strong> {appointment.patientAge}</p>
-                <p><strong>Gender:</strong> {appointment.gender}</p>
-                <p><strong>Address:</strong> {appointment.address}</p>
-                <p><strong>Date:</strong> {appointment.appointmentDate}</p>
-                <p><strong>Time:</strong> {appointment.timeSlot}</p>
-                <p><strong>Reason:</strong> {appointment.reason}</p>
+              <div className="appointment-details-grid">
+                <div className="detail-pill">
+                  <span className="detail-label">Patient</span>
+                  <p>{appointment.patientName}</p>
+                </div>
+
+                <div className="detail-pill">
+                  <span className="detail-label">Age</span>
+                  <p>{appointment.patientAge}</p>
+                </div>
+
+                <div className="detail-pill">
+                  <span className="detail-label">Gender</span>
+                  <p>{appointment.gender}</p>
+                </div>
+
+                <div className="detail-pill">
+                  <span className="detail-label">Date</span>
+                  <p>{appointment.appointmentDate}</p>
+                </div>
+
+                <div className="detail-pill">
+                  <span className="detail-label">Time</span>
+                  <p>{appointment.timeSlot}</p>
+                </div>
+
+                <div className="detail-pill">
+                  <span className="detail-label">Address</span>
+                  <p>{appointment.address}</p>
+                </div>
               </div>
 
+              <div className="appointment-reason-box">
+                <span className="detail-label">Reason for Visit</span>
+                <p>{appointment.reason}</p>
+              </div>
               {editingId === appointment.id ? (
                 <div className="edit-appointment-box">
                   <h3>Reschedule Appointment</h3>
