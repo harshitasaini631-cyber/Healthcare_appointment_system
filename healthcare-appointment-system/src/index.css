@@ -1448,3 +1448,39 @@ body.dark-mode .stats-strip div {
 body.dark-mode .stats-strip h2 {
   color: #9e72ff !important;
 }
+
+.error-boundary {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.error-boundary h1 {
+  color: #35215b;
+  margin-bottom: 10px;
+}
+
+.error-boundary p {
+  color: #726287;
+  margin-bottom: 20px;
+}
+
+.error-boundary button {
+  border: none;
+  background: #6c3fc9;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body.dark-mode .error-boundary h1 {
+  color: #f4efff;
+}
+
+body.dark-mode .error-boundary p {
+  color: #cbbbe7;
+}

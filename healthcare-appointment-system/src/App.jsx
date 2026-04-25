@@ -13,7 +13,8 @@ import NotFound from "./pages/NotFound";
 
 import { AppointmentProvider } from "./context/AppointmentContext";
 import { ThemeProvider } from "./context/ThemeContext";
-
+import ErrorBoundary from "./components/ErrorBoundary";
+import { Suspense } from "react";
 function App() {
   return (
     <ThemeProvider>
@@ -21,15 +22,19 @@ function App() {
         <BrowserRouter>
           <Navbar />
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/doctors" element={<Doctors />} />
-            <Route path="/doctor/:id" element={<DoctorDetails />} />
-            <Route path="/book/:id" element={<BookAppointment />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <ErrorBoundary>
+            <Suspense fallback={<div className="page-loader">Loading page...</div>}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/doctors" element={<Doctors />} />
+                <Route path="/doctor/:id" element={<DoctorDetails />} />
+                <Route path="/book/:id" element={<BookAppointment />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/analytics" element={<Analytics />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
 
           <Footer />
         </BrowserRouter>
