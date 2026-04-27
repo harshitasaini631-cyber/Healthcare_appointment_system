@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import DoctorCard from "../components/DoctorCard";
 import fallbackDoctors from "../data/fallbackDoctors";
 
@@ -60,17 +60,28 @@ function Doctors() {
     fetchDoctors();
   }, []);
 
-  let filteredDoctors = doctors.filter((doctor) => {
+  const filteredDoctors = useMemo(() => {
+  let result = doctors.filter((doctor) => {
     const matchSearch =
       doctor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       doctor.specialty.toLowerCase().includes(searchTerm.toLowerCase());
 
     const matchSpecialty =
-      selectedSpecialty === "All" ||
-      doctor.specialty === selectedSpecialty;
+      selectedSpecialty === "All" || doctor.specialty === selectedSpecialty;
 
     return matchSearch && matchSpecialty;
   });
+
+  if (sortOption === "rating-high") {
+    result = [...result].sort((a, b) => b.rating - a.rating);
+  }
+
+  if (sortOption === "name-az") {
+    result = [...result].sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  return result;
+}, [doctors, searchTerm, selectedSpecialty, sortOption]);
 
   if (sortOption === "rating-high") {
     filteredDoctors.sort((a, b) => b.rating - a.rating);
