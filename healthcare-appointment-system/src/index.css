@@ -1508,3 +1508,63 @@ body.dark-mode .error-boundary p {
     align-self: flex-start;
   }
 }
+
+@media (max-width: 900px) {
+  .doctors-page,
+  .doctor-details-page,
+  .booking-page,
+  .dashboard-page,
+  .analytics-page {
+    padding: 24px;
+  }
+
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctor-details-card,
+  .booking-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-stats-grid,
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .appointment-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .doctors-grid,
+  .dashboard-stats-grid,
+  .stats-grid,
+  .appointment-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-details-content h1,
+  .dashboard-header h1,
+  .analytics-header h1 {
+    font-size: 34px;
+  }
+
+  .booking-left h1 {
+    font-size: 28px;
+  }
+
+  .calendar-wrapper {
+    padding: 14px;
+  }
+
+  .react-calendar__tile {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dashboard-action-buttons button {
+    width: 100%;
+  }
+}
