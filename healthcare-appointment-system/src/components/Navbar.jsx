@@ -6,7 +6,7 @@ function Navbar() {
 
   return (
     <nav>
-      <h2>MediBook</h2>
+      <h2>BookMyDoc</h2>
 
       <div className="nav-right">
         <div className="nav-links">

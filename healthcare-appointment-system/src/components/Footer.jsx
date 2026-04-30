@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer>
-      <p>© 2026 MediBook</p>
+      <p>© 2026 BookMyDoc</p>
     </footer>
   );
 }
