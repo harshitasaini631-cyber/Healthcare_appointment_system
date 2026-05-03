@@ -10,7 +10,7 @@ function DoctorCard({ doctor }) {
         <p>{doctor.specialty}</p>
         <p>{doctor.experience}</p>
         <p>{doctor.location}</p>
-        <p>⭐ {doctor.rating}</p>
+        <p>⭐ {doctor.rating || "No Rating yet"}</p>
 
         <Link to={`/doctor/${doctor.id}`} className="view-profile-btn">
           View Profile
